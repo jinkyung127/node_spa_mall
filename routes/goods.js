@@ -36,6 +36,11 @@ const goods = [
   },
 ];
 
+//상품 목록 조회 API
+router.get("/goods", (req, res) => {
+	res.json({ goods: goods });
+});
+
 //상품 상세 조회 API
 router.get("/goods/:goodsId", (req, res) => {
   const { goodsId } = req.params;
